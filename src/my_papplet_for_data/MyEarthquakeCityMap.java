@@ -227,8 +227,7 @@ public class MyEarthquakeCityMap extends PApplet {
         rect(startPointOnX_ForMap, startPointOnY_ForMap, screenWidthForMap, screenHeightForMap);
     } 
     
-    //ДОРАБОТАТЬ!!!
-    
+        
     /**
      *
      * helper method to draw properties pop-up window in GUI near marker
