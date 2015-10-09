@@ -54,10 +54,7 @@ import parsing.ParseFeed;
  * Date: July 17, 2015
  * */
 public class MyEarthquakeCityMap extends PApplet {
-    
-    // You can ignore this.  It's to keep eclipse from generating a warning.
-    //private static final long serialVersionUID = 1L;
-    
+ 
     // IF YOU ARE WORKING OFFLINE, change the value of this variable to true
     private static final boolean offline = false;
     
@@ -77,13 +74,11 @@ public class MyEarthquakeCityMap extends PApplet {
     // The map
     private UnfoldingMap map;
     
-    private boolean setMapAsFoto = false; //привязать эту переменную к кнопке
-    
     //feed with magnitude 2.5+ Earthquakes
     private String earthquakesURL = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.atom";
     
     //loading data
-    private HashMap<String, Object> listOfProperties;
+    //private HashMap<String, Object> listOfProperties;
     
     //Properties and location
     private List<PointFeature> earthquakes;
@@ -96,10 +91,7 @@ public class MyEarthquakeCityMap extends PApplet {
     
     //simple point marker for adding on a list
     private SimplePointMarker mrk;
-    
-    //simple point marker for use with mouse
-    //public SimplePointMarker spmFromMap;
-    
+   
     private PGraphics pg;
     
     //color for somehing
@@ -110,6 +102,9 @@ public class MyEarthquakeCityMap extends PApplet {
     
     //zoom for map
     private float zoomScale;
+    
+    //привязать эту переменную к кнопке
+    private boolean setMapAsFoto = false; 
     
     //use native Java library to getting a screen size
     private final Toolkit kit = Toolkit.getDefaultToolkit();
@@ -162,6 +157,9 @@ public class MyEarthquakeCityMap extends PApplet {
                 markers.add(mrk);
             }
         }
+        
+        // prevent thread from starving everything else
+        //noLoop();
         
         System.out.println("screenWidth = " + screenWidth + "\n" + "screenHeight = " + screenHeight + "\n");
     }
@@ -259,6 +257,7 @@ public class MyEarthquakeCityMap extends PApplet {
             float yPosMark = sp_spmFromMap.y;
             fill(xPosMark,yPosMark,100,100);
             rect(xPosMark,yPosMark,100,100);
+            
         }
         }
     }
@@ -277,10 +276,10 @@ public class MyEarthquakeCityMap extends PApplet {
      *
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        
-        PApplet.main(new String[] { 
-            "--present", "my_papplet_for_data.MyEarthquakeCityMap" 
-        });
-    }
+    /*    public static void main(String args[]) {
+    
+    PApplet.main(new String[] {
+    "--present", "my_papplet_for_data.MyEarthquakeCityMap"
+    });
+    }*/
 }
