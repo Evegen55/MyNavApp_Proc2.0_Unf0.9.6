@@ -140,12 +140,12 @@ public class MyEarthquakeCityMap extends PApplet {
             map = new UnfoldingMap(this, startPointOnX_ForMap, startPointOnY_ForMap, screenWidthForMap, screenHeightForMap, new Microsoft.AerialProvider());
         }
         zoomScale = 1.85F;
-        map.zoomTo(zoomScale);
-        
-        MapUtils.createDefaultEventDispatcher(this, map);
+        map.zoomTo(zoomScale); 
+                        
+        MapUtils.createDefaultEventDispatcher(this, map); 
         
         // The List you will populate with new SimplePointMarkers
-        markers = new ArrayList<Marker>();
+        markers = new ArrayList<Marker>(); 
         
         //Use provided parser to collect properties for each earthquake
         //PointFeatures have a getLocation method
