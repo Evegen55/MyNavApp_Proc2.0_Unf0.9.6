@@ -36,7 +36,8 @@ public class NewJFrame extends javax.swing.JFrame {
                  
 
          setLayout(new BorderLayout());
-         PApplet embed = new MyEarthquakeCityMap();
+         //PApplet embed = new MyEarthquakeCityMap(); //FOR EARTHQUAKES
+         PApplet embed = new MyMapFirst(); //FOR MY MAP
          add(embed, BorderLayout.CENTER);
 
          // important to call this whenever embedding a PApplet.
