@@ -31,7 +31,7 @@ public class MyMapFirst extends PApplet {
     private float zoomScaleFirstMap;
     
     //привязать эту переменную к кнопке
-    private boolean setMapAsFoto = false;
+    private boolean setMapAsFoto = true;
     
     //use native Java library to getting a screen size
     private final Toolkit kit = Toolkit.getDefaultToolkit();
@@ -54,7 +54,7 @@ public class MyMapFirst extends PApplet {
         size(screenWidthForApp, screenHeightForApp, OPENGL);
         
         if (setMapAsFoto) {
-            map_first = new UnfoldingMap(this, startPointOnX_ForMap, startPointOnY_ForMap, screenWidthForMap, screenHeightForMap, new MBTilesMapProvider(mbTilesString));
+            map_first = new UnfoldingMap(this, startPointOnX_ForMap, startPointOnY_ForMap, screenWidthForMap, screenHeightForMap, new Google.GoogleMapProvider());
             
         } else {
            map_first = new UnfoldingMap(this, startPointOnX_ForMap, startPointOnY_ForMap, screenWidthForMap, screenHeightForMap, new Microsoft.AerialProvider());
