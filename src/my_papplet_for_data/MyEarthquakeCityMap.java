@@ -185,6 +185,7 @@ public class MyEarthquakeCityMap extends PApplet {
      */
     public SimplePointMarker createSimplePointMarker(PointFeature feature) {
         pg = new PGraphics();
+        
         Object magObj = feature.getProperty("magnitude");
         float magnitude = Float.parseFloat(magObj.toString());
         spm = new SimplePointMarker(feature.getLocation());
