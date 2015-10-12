@@ -7,12 +7,10 @@ package my_papplet_for_data;
 
 import de.fhpotsdam.unfolding.UnfoldingMap;
 import de.fhpotsdam.unfolding.providers.Google;
-import de.fhpotsdam.unfolding.providers.MBTilesMapProvider;
 import de.fhpotsdam.unfolding.providers.Microsoft;
 import de.fhpotsdam.unfolding.utils.MapUtils;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import static my_papplet_for_data.MyEarthquakeCityMap.mbTilesString;
 import processing.core.PApplet;
 
 /**
@@ -34,11 +32,11 @@ public class MyMapFirst extends PApplet {
     private boolean setMapAsFoto = true;
     
     //use native Java library to getting a screen size
-    private final Toolkit kit = Toolkit.getDefaultToolkit();
-    private final Dimension screenSize = kit.getScreenSize();
+    public Toolkit kit = Toolkit.getDefaultToolkit();
+    public Dimension screenSize = kit.getScreenSize();
     
-    private final int screenWidth =  screenSize.width;
-    private final int screenHeight = screenSize.height;
+    public int screenWidth =  screenSize.width;
+    public int screenHeight = screenSize.height;
     
     private final int screenWidthForApp = screenWidth-screenWidth/10;
     private final int screenHeightForApp = screenHeight-screenHeight/10;

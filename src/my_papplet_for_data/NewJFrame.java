@@ -17,6 +17,7 @@
 package my_papplet_for_data;
 
 import java.awt.BorderLayout;
+import java.awt.Toolkit;
 import processing.core.PApplet;
 
 /**
@@ -35,15 +36,15 @@ public class NewJFrame extends javax.swing.JFrame {
         
                  
 
-         setLayout(new BorderLayout());
-         //PApplet embed = new MyEarthquakeCityMap(); //FOR EARTHQUAKES
-         PApplet embed = new MyMapFirst(); //FOR MY MAP
-         add(embed, BorderLayout.CENTER);
-
-         // important to call this whenever embedding a PApplet.
-         // It ensures that the animation thread is started and
-         // that other internal variables are properly set.
-         embed.init();
+        setLayout(new BorderLayout());
+        //PApplet embed = new MyEarthquakeCityMap(); //FOR EARTHQUAKES
+        PApplet embed = new MyMapFirst(); //FOR MY MAP
+        add(embed, BorderLayout.CENTER);
+        
+        // important to call this whenever embedding a PApplet.
+        // It ensures that the animation thread is started and
+        // that other internal variables are properly set.
+        embed.init();
         
         
     }
@@ -62,6 +63,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(700, 700));
+        setSize(Toolkit.getDefaultToolkit().getScreenSize());
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -75,11 +78,11 @@ public class NewJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1189, Short.MAX_VALUE)
+            .addGap(0, 1321, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 595, Short.MAX_VALUE)
+            .addGap(0, 776, Short.MAX_VALUE)
         );
 
         pack();
