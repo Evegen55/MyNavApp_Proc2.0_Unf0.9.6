@@ -72,7 +72,7 @@ public class MyEarthquakeCityMap extends PApplet {
     public static String mbTilesString = "blankLight-1-3.mbtiles";
     
     // The map
-    private UnfoldingMap map;
+    private UnfoldingMap map; 
     
     //feed with magnitude 2.5+ Earthquakes
     private String earthquakesURL = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.atom";
