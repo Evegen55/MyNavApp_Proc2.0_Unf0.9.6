@@ -37,8 +37,8 @@ public class NewJFrame extends javax.swing.JFrame {
                  
 
         setLayout(new BorderLayout());
-        //PApplet embed = new MyEarthquakeCityMap(); //FOR EARTHQUAKES
-        PApplet embed = new MyMapFirst(); //FOR MY MAP
+        PApplet embed = new MyEarthquakeCityMap(); //FOR EARTHQUAKES
+        //PApplet embed = new MyMapFirst(); //FOR MY MAP
         add(embed, BorderLayout.CENTER);
         
         // important to call this whenever embedding a PApplet.
@@ -63,7 +63,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(700, 700));
+        setLocation(new java.awt.Point(0, 0));
+        setLocationByPlatform(true);
         setSize(Toolkit.getDefaultToolkit().getScreenSize());
 
         jMenu1.setText("File");
@@ -78,11 +79,11 @@ public class NewJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1321, Short.MAX_VALUE)
+            .addGap(0, 593, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 776, Short.MAX_VALUE)
+            .addGap(0, 511, Short.MAX_VALUE)
         );
 
         pack();

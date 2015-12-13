@@ -253,10 +253,14 @@ public class MyEarthquakeCityMap extends PApplet {
             System.out.println(spmFromMap.getProperties());
             //get a marker screen position and draw a rectangle with text
             ScreenPosition sp_spmFromMap = spmFromMap.getScreenPosition(map);
+            String my_text = spmFromMap.getProperty("title").toString();
             float xPosMark = sp_spmFromMap.x;
             float yPosMark = sp_spmFromMap.y;
-            fill(xPosMark,yPosMark,100,100);
-            rect(xPosMark,yPosMark,100,100);
+            text(my_text,xPosMark,yPosMark);
+            fill(color);
+            rect(xPosMark,yPosMark,300,30);
+            noFill();
+            
             
         }
         }
